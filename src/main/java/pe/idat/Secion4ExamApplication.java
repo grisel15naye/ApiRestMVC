@@ -1,4 +1,4 @@
-package pe.idat.Secion4Exam;
+package pe.idat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

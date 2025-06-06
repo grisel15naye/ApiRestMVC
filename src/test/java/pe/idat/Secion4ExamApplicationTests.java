@@ -1,4 +1,4 @@
-package pe.idat.Secion4Exam;
+package pe.idat;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
