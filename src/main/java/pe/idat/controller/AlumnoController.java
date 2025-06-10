@@ -34,7 +34,7 @@ public class AlumnoController {
         {
             try {
                 alumnoService.insert(alumno);
-                return new ResponseEntity<>("Instructor"+alumno.getNombre()+" creado correctamente", HttpStatus.CREATED);
+                return new ResponseEntity<>("Alumno "+alumno.getNombre()+" creado correctamente", HttpStatus.CREATED);
             }catch (Exception e){
                 return new ResponseEntity<>("error al agregar", HttpStatus.INTERNAL_SERVER_ERROR);
             }
