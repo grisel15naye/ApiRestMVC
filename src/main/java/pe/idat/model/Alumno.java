@@ -1,5 +1,7 @@
 package pe.idat.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -35,6 +37,7 @@ public class Alumno implements Serializable {
                     foreignKey=@ForeignKey(foreignKeyDefinition="foreign key(carrera_id) references carrera(carrera_id)")))
     private Set<Carrera>itemsCarrera=new HashSet<>();
 
+    @JsonIgnore
     @ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE})
     @JoinTable(
             name="alumno_materia",

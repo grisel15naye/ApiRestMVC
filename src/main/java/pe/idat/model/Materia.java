@@ -1,5 +1,7 @@
 package pe.idat.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -20,6 +22,7 @@ public class Materia implements Serializable {
     private Integer creditos;
 
     @ManyToMany(mappedBy = "itemsMateria", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JsonIgnore
     private Set<Alumno> itemsAlumno =new HashSet<>();
     public Materia(){}
 

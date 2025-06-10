@@ -22,7 +22,7 @@ public class MateriaController {
         return new ResponseEntity<>(itemsMateria, HttpStatus.OK);
     }
     @GetMapping("/buscar/{materiaId}")
-    private ResponseEntity<?>bucar(@PathVariable Long materiaId){
+    private ResponseEntity<?>buscar(@PathVariable Long materiaId){
         Materia materia=materiaService.findById(materiaId);
         if (materia!= null){
             return new ResponseEntity<>(materia, HttpStatus.OK);
