@@ -2,6 +2,7 @@ package pe.idat.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pe.idat.model.Materia;
 import pe.idat.repository.MateriaRepository;
 
@@ -32,11 +33,13 @@ public class MateriaServiceImpl implements MateriaService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Materia findById(Long materiaId) {
         return materiaRepository.findById(materiaId).orElse(null);
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Collection<Materia> findAll() {
         return (Collection<Materia>) materiaRepository.findAll();
     }
