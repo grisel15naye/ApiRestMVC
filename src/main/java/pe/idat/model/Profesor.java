@@ -1,5 +1,7 @@
 package pe.idat.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -26,6 +28,7 @@ public class Profesor implements Serializable {
     private String telefono;
 
     @ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE})
+    @JsonIgnore
     @JoinTable(
             name="profesor_tecnologia",
             joinColumns=@JoinColumn(name="profesor_id",nullable=false,
