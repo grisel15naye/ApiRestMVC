@@ -1,5 +1,6 @@
 package pe.idat.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -20,6 +21,7 @@ public class Carrera implements Serializable {
     @Column(nullable = false)
     private Integer duracion;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "itemsCarrera", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<Alumno> itemsAlumno =new HashSet<>();
     public Carrera(){}

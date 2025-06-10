@@ -28,6 +28,7 @@ public class Alumno implements Serializable {
     @Column(nullable = false, length = 20)
     private String genero;
 
+    @JsonIgnore
     @ManyToMany(cascade={CascadeType.PERSIST,CascadeType.MERGE})
     @JoinTable(
             name="alumno_carrera",

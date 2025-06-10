@@ -63,7 +63,7 @@ public class AlumnoMateriaController {
         }
 
         if (alumno.getItemsMateria().contains(materia)) {
-            return new ResponseEntity<>("Alumno y niscrito en esta amteria", HttpStatus.CONFLICT);
+            return new ResponseEntity<>("Alumno ya inscrito en esta amteria", HttpStatus.CONFLICT);
         }
 
         alumno.getItemsMateria().add(materia);
