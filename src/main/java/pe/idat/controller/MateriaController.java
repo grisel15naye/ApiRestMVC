@@ -29,13 +29,13 @@ public class MateriaController {
         }return new ResponseEntity<>("Materia no encontrada",HttpStatus.NOT_FOUND);
 
     }
-    @PostMapping("agregar")
+    @PostMapping("/agregar")
     public ResponseEntity<?>agregar (@RequestBody Materia materia){
         materiaService.insert(materia);
         return new ResponseEntity<>("Materia "+materia.getDescC()+" Agregado correctamente", HttpStatus.CREATED);
     }
 
-    @PutMapping("editar/{materiaId}")
+    @PutMapping("/editar/{materiaId}")
     public ResponseEntity<?>editar(@PathVariable Long materiaId,
                                    @RequestBody Materia materia){
         Materia materiaExistente=materiaService.findById(materiaId);
