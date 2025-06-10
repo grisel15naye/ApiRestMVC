@@ -37,7 +37,7 @@ public class ProfesorController {
         return new ResponseEntity<>("Profesor "+profesor.getNombreP()+" agregado correctamente", HttpStatus.OK);
     }
 
-    @PutMapping("editar/{profesorId}")
+    @PutMapping("/editar/{profesorId}")
     private ResponseEntity<?>editar(@PathVariable Long profesorId,
                                     @RequestBody Profesor profesor){
         Profesor profesorExistente=profesorService.findById(profesorId);
