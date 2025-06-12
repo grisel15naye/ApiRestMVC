@@ -98,8 +98,7 @@ logging.level.org.hibernate.SQL=debug
 - APO-DOCS: http://localhost:8080/rest/v3/api-docs
 - Generada automáticamente a partir de tus controladores
 ### 🔎 Colección Postman
-- Incluye una colección Postman exportada con pruebas de todos los endpoints.
-- 📁 postman/ApiRestMVC.postman_collection.json (sube este archivo si no lo tienes aún)
+- https://documenter.getpostman.com/view/37774025/2sB2x6jrHs
 
 ---
 ## 👩‍💻 Autor
